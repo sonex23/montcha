@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:montcha/ui/pages/main_page.dart';
+import 'package:montcha/ui/pages/sign_in.dart';
 import 'package:montcha/ui/pages/sign_up.dart';
 
 void main() {
@@ -15,7 +17,9 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Mountcha\'',
       routes: {
-        '/': (context) => const SingnUpPage(),
+        '/': (context) => const SignUpPage(),
+        '/sign-in': (context) => const SignInPage(),
+        '/main': (context) => const MainPage(),
       },
     );
   }

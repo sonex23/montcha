@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:montcha/shared/theme.dart';
 import 'package:montcha/ui/widgets/custom_text_form_field.dart';
 
-class SignUpPage extends StatefulWidget {
-  const SignUpPage({Key? key}) : super(key: key);
+class SignInPage extends StatefulWidget {
+  const SignInPage({Key? key}) : super(key: key);
 
   @override
-  State<SignUpPage> createState() => _SignUpPageState();
+  State<SignInPage> createState() => _SignInPageState();
 }
 
-class _SignUpPageState extends State<SignUpPage> {
+class _SignInPageState extends State<SignInPage> {
   final GlobalKey<FormState> _signUpFormKey = GlobalKey<FormState>();
   final TextEditingController _emailController =
       TextEditingController(text: "");
@@ -41,7 +41,7 @@ class _SignUpPageState extends State<SignUpPage> {
                 ),
               ),
               Text(
-                'Get started for free',
+                'Sign in with your account',
                 style: blackTextStyle.copyWith(
                   fontSize: 24,
                   fontWeight: bold,
@@ -52,18 +52,18 @@ class _SignUpPageState extends State<SignUpPage> {
               ),
               GestureDetector(
                 onTap: () {
-                  Navigator.pushNamed(context, '/sign-in');
+                  Navigator.pop(context);
                 },
                 child: RichText(
                   text: TextSpan(
-                    text: 'Have an account? ',
+                    text: 'Don\'t have an account yet? ',
                     style: blackTextStyle.copyWith(
                       fontSize: 16,
                       fontWeight: regular,
                     ),
                     children: [
                       TextSpan(
-                        text: 'Sign in',
+                        text: 'Sign up',
                         style: blueTextStyle.copyWith(
                           fontSize: 16,
                           fontWeight: semiBold,
@@ -100,7 +100,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           width: 10,
                         ),
                         Text(
-                          'Sign up with Google',
+                          'Sign in with Google',
                           style: blackTextStyle.copyWith(
                             fontWeight: semiBold,
                             fontSize: 16,
@@ -136,13 +136,13 @@ class _SignUpPageState extends State<SignUpPage> {
                       const SizedBox(height: 20),
                       CustomTextFormField(
                         controller: _passwordController,
-                        title: 'Create Password',
+                        title: 'Password',
                         isPassword: true,
                       ),
                       const SizedBox(height: 34),
                       InkWell(
                         onTap: () {
-                          _signUpFormKey.currentState!.validate();
+                          Navigator.pushNamed(context, '/main');
                         },
                         child: Container(
                           height: 60,
@@ -153,7 +153,7 @@ class _SignUpPageState extends State<SignUpPage> {
                           ),
                           child: Center(
                             child: Text(
-                              'Create Account',
+                              'Sign into your account',
                               style: whiteTextStyle.copyWith(
                                 fontSize: 16,
                                 fontWeight: medium,

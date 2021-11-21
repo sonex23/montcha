@@ -12,6 +12,7 @@ Color kRedColor = const Color(0xffD73D4F);
 Color kBlueDisable = const Color(0xff9392FC);
 Color kWhiteDisable = const Color(0xffF8F8F8);
 Color kGreyColor = const Color(0xffA4B0BE);
+Color kGreyShadowColor = const Color(0xffACACAC);
 
 TextStyle blackTextStyle = GoogleFonts.inter(color: kBlackColor);
 TextStyle greenTextStyle = GoogleFonts.inter(color: kGreenColor);
@@ -19,6 +20,7 @@ TextStyle redTextStyle = GoogleFonts.inter(color: kRedColor);
 TextStyle blueTextStyle = GoogleFonts.inter(color: kPrimaryColor);
 TextStyle brownTextStyle = GoogleFonts.inter(color: kBrownColor);
 TextStyle whiteTextStyle = GoogleFonts.inter(color: Colors.white);
+TextStyle greyTextStyle = GoogleFonts.inter(color: kGreyColor);
 
 FontWeight light = FontWeight.w300;
 FontWeight regular = FontWeight.w400;
